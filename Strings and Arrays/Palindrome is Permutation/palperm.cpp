@@ -2,6 +2,15 @@
 #include <string>
 #include <unordered_map>
 
+/*
+Based on a hashmap approach:
+	1) Build Hash Table
+	2) Two conditions in the case of an odd string vs even string
+	3) If the string is even, there cannot be a value with an even frequency (it is not a palindrome)
+	4) If the string is odd, there can be only 1 char that has an odd frequency. Any more than that
+		 then the string is not a palindrome
+*/
+
 bool PalisPerm(std::string &str) {
 	std::unordered_map<char, int> map;
 	int odd = 0;

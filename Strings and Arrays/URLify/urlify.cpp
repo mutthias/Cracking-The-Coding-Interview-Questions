@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 
+// Create a new string that will build our new urlified string. If 
+// at any point we run into a space, we replace that with the "%20".
+
 std::string URLify(std::string &str, int n) {
 	std::string url_string = "";
 	
@@ -20,3 +23,4 @@ int main() {
 	std::cout << URLify(s, 13) << std::endl;
 	return 0;
 }
+
