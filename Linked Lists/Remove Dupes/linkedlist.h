@@ -64,28 +64,20 @@ class LinkedList {
       std::cout << std::endl; 
     }
 
-    void RemoveDupes(LinkedList<T>* head) {
+    void RemoveDupes() {
       Node<T>* curr = head;
-      Node<T>* temp = head;
-      while (temp) { // 1 2 3 4 5
-        while (curr) {
-          curr = curr->head;
-          if (curr->data == temp->data) {
-            delete curr;
+      while (curr) {
+        Node<T>* temp = curr;
+        while (temp->next) {
+          if (temp->next->data == curr->data) {
+            temp->next = temp->next->next;
+          } else {
+            temp = temp->next;
           }
-          temp = temp->next;
         }
-    }
+        curr = curr->next;
+      }
 }
 
-/* 
-// 1 4 1 2 1 6
-1 1
-4 1
-4 1
-
-4 1
-1 1
-*/
 
 };
