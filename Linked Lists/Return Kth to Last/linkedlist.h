@@ -21,6 +21,7 @@ class LinkedList {
     LinkedList() { head = NULL; }
 
     void FindKthElement(Node<T>* head, const int k);
+    void FindKthElement2(Node<T>* list, const int k, int i);
     LinkedList<T> ReverseList(LinkedList<T>* head);
     void FindLastKth(const int k);
 
