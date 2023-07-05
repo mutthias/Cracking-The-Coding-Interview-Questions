@@ -15,10 +15,14 @@ class Node {
 template <typename T>
 class LinkedList {
   Node<T>* head;
-  int size;
+  int size = 0;
 
   public: 
     LinkedList() { head = NULL; }
+
+    void FindKthElement(Node<T>* head, const int k);
+    LinkedList<T> ReverseList(LinkedList<T>* head);
+    void FindLastKth(const int k);
 
     void insert(const T& value) {
       Node<T>* newNode = new Node<T>(value);  // Create/Allocate a new node
@@ -61,7 +65,7 @@ class LinkedList {
         std::cout << curr->data << " ";
         curr = curr->next;
       }
-      std::cout << "size: " << curr->size;
+      std::cout << "size: " << size << std::endl;
       std::cout << std::endl; 
     }
 
@@ -78,7 +82,5 @@ class LinkedList {
         }
         curr = curr->next;
       }
-}
-
-
+    }
 };

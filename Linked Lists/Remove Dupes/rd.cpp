@@ -23,5 +23,4 @@ int main() {
   list.print();
   list.RemoveDupes();
   list.print();
-
 }
