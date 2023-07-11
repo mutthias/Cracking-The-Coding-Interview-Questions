@@ -20,6 +20,8 @@ class LinkedList {
   public: 
     LinkedList() { head = NULL; }
 
+    void RemoveMiddle();
+
     void insert(const T& value) {
       Node<T>* newNode = new Node<T>(value);  // Create/Allocate a new node
       if (!head) {                      // Is the head null?
