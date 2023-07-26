@@ -34,26 +34,21 @@ class Stack {
       else
         stack.push_back({item, std::min(item, stack.back().second)});
     }
-
     void Pop() {
       stack.pop_back();
     }
-
     int Size() {
       return stack.size();
     }
-
     int GetMin() {
       return stack.back().second;
     }
-
     int Top() {
       if (stack.size())
         return stack.back().first;
       else
         return -1;
     }
-
 };
 
 int main() {
