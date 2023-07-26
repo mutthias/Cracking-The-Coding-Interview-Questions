@@ -15,6 +15,9 @@ The stacks inside of the vector will just be ordinary stacks using the std libra
 (for simplicity), and will be available to push until the stack reaches a certain limit. 
 
 [ {s1, 0} , {s2, 1}, {s3, 2}, ... ]
+
+Because we included the index in our set of stacks, we can easily go to the index at which 
+
 */
 
 class Stack {
@@ -57,6 +60,10 @@ class Stack {
         stack.back().first.pop();
       }
     }
+    void PopAt(int index) {
+      stack[index].first.pop();
+    }
+
     int Size() {
       return stack.size();
     }
