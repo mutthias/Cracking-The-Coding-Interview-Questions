@@ -32,7 +32,7 @@ class Stack {
       if (stack.empty()) 
         stack.push_back({item, item});
       else
-        stack.push_back({item, std::min(item, stack.back().second)})
+        stack.push_back({item, std::min(item, stack.back().second)});
     }
 
     void Pop() {
