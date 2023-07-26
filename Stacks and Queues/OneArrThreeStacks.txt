@@ -1,0 +1,26 @@
+How to use 1 array to implement 3 stacks?
+
+A stack is a data structure that implements LIFO, which means the last element or most 
+recent element inserted (pushed) is also the first element to be removed (popped). In
+a stack, indexing is not constant like an array is, but insertion and removal is constant.
+
+An array allows for constant access to the i'th element, however. The only similarity the two
+have is that they can be looked at as 'lists'. Perhaps, to figure this out, let's look at the
+operations you can do with both:
+
+1) Popping: A vector can easily represent a stack to pop elements. Simply just pop_back() the 
+   end of the vector
+
+2) Pushing: Same deal as popping, simply push_back().
+
+So 1 array can represent just one ordinary stack. However, what about 2 more? If we split the array
+into 3 parts, for example:
+
+{ 1 2 3 | 4 5 6 | 7 8 9 }
+
+...then we can perform the same operations as described earlier, except we're able to do this because 
+arrays allow for indexing. We can track the size of each "stack" in the array, and when pushing an element,
+say we want to push in stack 2. We can then push at vector[size of stack 2] and shift the other elements
+over, same with removal. 
+
+Dare I say, this is not very efficient at all but for the sake of the problem this should suffice.
